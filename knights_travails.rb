@@ -96,8 +96,13 @@ def knight_moves(start, finish)
     finish = prev[index] #Change the destination to be its predecessor
   end
 
-  return path.reverse
+  path.reverse!
+
+  puts "You made it in #{path.length-1} moves! Here's your path:"
+  for i in 0...path.length
+    p path[i]
+  end
 
 end
 
-p knight_moves([1,2],[8,7])
+knight_moves([4,4],[5,4])
